@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.blog</groupId>
-	<artifactId>blog-app-apis</artifactId>
+	<artifactId>blog-app-apis-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>blog-app-apis</name>
-	<description>This is backend  apis app for blogging</description>
+	<name>blog-app-apis-2</name>
+	<description>This is backend  apis app 3 for blogging</description>
 	<url/>
 	<licenses>
 		<license/>
