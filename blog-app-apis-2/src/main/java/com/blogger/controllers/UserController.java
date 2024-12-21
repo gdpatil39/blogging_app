@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-//	post====create user
+//	post-create user
 	@PostMapping()
 	public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto ){
 		
@@ -35,7 +35,7 @@ public class UserController {
 		
 	}
 	
-//	put====Update user
+//	put-Update user
 	@PutMapping("/{userId}")
 	public ResponseEntity<UserDto> updateUser(@RequestBody UserDto userDto, @PathVariable("userId") Integer uid){
 		UserDto updateUser = this.userService.updateUser(userDto, uid);
@@ -44,14 +44,14 @@ public class UserController {
 	}
 	
 	
-//	delete ==== delete user
+//	delete - delete user
 	@DeleteMapping("/{userId}")
 	public ResponseEntity<?> deleteUser(@PathVariable("userId") Integer uid ){
 		this.deleteUser(uid);
 		return new  ResponseEntity<ApiResponse>(new ApiResponse("User Deleted Successfully", true),HttpStatus.OK);
 		
 	}
-//	get === user get
+//	get - user get
 	
 	@GetMapping("/")
 	public ResponseEntity<List<UserDto>> getAllUsers(){
