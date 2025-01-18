@@ -6,18 +6,20 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.blogger.entity.Category;
 import com.blogger.exceptions.ResourceNotFoundException;
 import com.blogger.payloads.CategoryDto;
 import com.blogger.repositories.CategoryRepo;
 import com.blogger.services.CategoryService;
-
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
 	@Autowired
 	private CategoryRepo categoryRepo;
-
+	
+	@Autowired
 	private ModelMapper modelMapper;
 	
 	//create
