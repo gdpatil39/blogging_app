@@ -1,5 +1,6 @@
 package com.blogger.entity;
 
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -12,9 +13,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.ManyToAny;
+import org.springframework.stereotype.Service;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name="posts")
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class Post {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
