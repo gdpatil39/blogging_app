@@ -17,6 +17,7 @@ import com.blogger.entity.Post;
 import com.blogger.entity.User;
 import com.blogger.exceptions.ResourceNotFoundException;
 import com.blogger.payloads.PostDto;
+import com.blogger.payloads.PostResponse;
 import com.blogger.repositories.CategoryRepo;
 import com.blogger.repositories.PostRepo;
 import com.blogger.repositories.UserRepo;
@@ -80,7 +81,7 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
-	public List<PostDto> getAllPost(Integer pageNumber,Integer pageSize) {
+	public PostResponse getAllPost(Integer pageNumber,Integer pageSize) {
 		
 		 org.springframework.data.domain.Pageable p = PageRequest.of(pageNumber, pageSize);
 		
@@ -90,7 +91,19 @@ public class PostServiceImpl implements PostService {
 		List<PostDto> postDtos = allPosts.stream().map((post) -> this.modelMapper.map(post, PostDto.class))
 				.collect(Collectors.toList());
 
-		return postDtos;
+		
+		PostResponse postResponse=new PostResponse();
+		
+		postResponse.setContent(postDtos);
+		postResponse.setPageNumber(pagePost.getNumber());
+		postResponse.setPageSize(pagePost.getSize());
+		postResponse.setTotalElements(pagePost.getTotalElements());
+		postResponse.setTotalPages(pagePost.getTotalPages());
+		
+		postResponse.setLastPage(pagePost.isLast());
+		
+		
+		return postResponse;
 	}
 
 	@Override
