@@ -1,6 +1,7 @@
 package com.blogger.services.impl;
 
 import java.util.List;
+
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -13,6 +14,11 @@ import com.blogger.exceptions.ResourceNotFoundException;
 import com.blogger.payloads.CategoryDto;
 import com.blogger.repositories.CategoryRepo;
 import com.blogger.services.CategoryService;
+
+import lombok.extern.slf4j.Slf4j;
+
+
+@Slf4j
 @Service
 public class CategoryServiceImpl implements CategoryService {
 

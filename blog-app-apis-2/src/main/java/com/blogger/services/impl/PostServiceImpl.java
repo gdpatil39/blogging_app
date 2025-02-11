@@ -24,6 +24,10 @@ import com.blogger.repositories.PostRepo;
 import com.blogger.repositories.UserRepo;
 import com.blogger.services.PostService;
 
+import lombok.extern.slf4j.Slf4j;
+
+
+@Slf4j
 @Service
 public class PostServiceImpl implements PostService {
 
@@ -147,10 +151,15 @@ public class PostServiceImpl implements PostService {
 		return postDtos;
 	}
 
+	//search
 	@Override
-	public List<Post> searchPosts(String keyword) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PostDto> searchPosts(String keyword) {
+		List<Post> posts = this.postRepo.findByTitleContaining(keyword);
+		List<PostDto> postDtos = posts.stream().map((post)->this.modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
+		return postDtos;
+		
+		
+		
 	}
 
 }

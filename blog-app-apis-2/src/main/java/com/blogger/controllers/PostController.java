@@ -115,4 +115,16 @@ public class PostController {
 	}
 	
 	
+	// search 
+	@GetMapping("/posts/search/{Keywords}")
+	public ResponseEntity<List<PostDto>> searchPostByTitle(@PathVariable("Keywords") String Keywords ){
+		
+		List<PostDto> result =this.postService.searchPosts(Keywords);
+		
+		return new ResponseEntity<List<PostDto>>(result, HttpStatus.OK);
+		
+	}
+	
+	
+	
 }

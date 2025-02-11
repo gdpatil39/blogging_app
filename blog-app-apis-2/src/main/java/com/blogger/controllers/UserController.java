@@ -21,6 +21,8 @@ import com.blogger.payloads.ApiResponse;
 import com.blogger.payloads.UserDto;
 import com.blogger.services.UserService;
 
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @RestController
 @RequestMapping("api/users")
 public class UserController {
@@ -58,7 +60,7 @@ public class UserController {
 	
 	@GetMapping("/")
 	public ResponseEntity<List<UserDto>> getAllUsers(){
-		
+		log.info("Request user contoller to getall user");
 		return ResponseEntity.ok(this.userService.getAllUsers());
 		
 	}

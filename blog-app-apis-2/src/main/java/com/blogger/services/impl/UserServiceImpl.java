@@ -14,6 +14,8 @@ import com.blogger.payloads.UserDto;
 import com.blogger.repositories.UserRepo;
 import com.blogger.services.UserService;
 
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 	@Autowired
@@ -22,9 +24,10 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private ModelMapper modelMapper;
 	
-	
+	//private static final  logger=
 	@Override
 	public UserDto createUser(UserDto userDto) {
+		log.info("Request in  create a new user with userid: {}",userDto);
 		User user =this.dtoToUser(userDto);
 		User saveUser = this.userRepo.save(user);
 		return this.userToDto(saveUser);
@@ -54,6 +57,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<UserDto> getAllUsers() {
+		log.info("Request in  getAllUser ");
 		List<User> users =this.userRepo.findAll();
 		List<UserDto> userDtos = users.stream().map(user->this.userToDto(user)).collect(Collectors.toList());
 		return userDtos;
