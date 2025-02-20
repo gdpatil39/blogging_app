@@ -352,3 +352,28 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2025-02-11 18:08:42.542  INFO 9900 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-02-11 18:08:42.543  INFO 9900 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
 2025-02-11 18:08:42.545  INFO 9900 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-02-11 18:08:42.602  INFO 9900 --- [restartedMain] com.blogger.BlogAppApis2Application      : Starting BlogAppApis2Application using Java 22.0.1 on DESKTOP-N3UHOGF with PID 9900 (D:\gaurav\BikkadIt\workspace\blogger\blog-app-apis-2\target\classes started by Gaurav in D:\gaurav\BikkadIt\workspace\blogger\blog-app-apis-2)
+2025-02-11 18:08:42.603  INFO 9900 --- [restartedMain] com.blogger.BlogAppApis2Application      : No active profile set, falling back to 1 default profile: "default"
+2025-02-11 18:08:42.677  INFO 9900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11 18:08:42.689  INFO 9900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+2025-02-11 18:08:42.728  INFO 9900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9091 (http)
+2025-02-11 18:08:42.730  INFO 9900 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11 18:08:42.730  INFO 9900 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2025-02-11 18:08:42.745  INFO 9900 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11 18:08:42.745  INFO 9900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 141 ms
+2025-02-11 18:08:42.761  INFO 9900 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11 18:08:42.764  INFO 9900 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-02-11 18:08:42.779  INFO 9900 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-02-11 18:08:42.780  INFO 9900 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-02-11 18:08:42.837  INFO 9900 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-02-11 18:08:42.838  INFO 9900 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11 18:08:42.921  WARN 9900 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-11 18:08:42.978  INFO 9900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-11 18:08:42.985  INFO 9900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9091 (http) with context path ''
+2025-02-11 18:08:42.987  INFO 9900 --- [restartedMain] com.blogger.BlogAppApis2Application      : Started BlogAppApis2Application in 0.402 seconds (JVM running for 748.993)
+2025-02-11 18:08:42.989  INFO 9900 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-11 18:10:26.616  INFO 9900 --- [http-nio-9091-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-11 18:10:26.617  INFO 9900 --- [http-nio-9091-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-11 18:10:26.619  INFO 9900 --- [http-nio-9091-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-11 18:30:28.388  WARN 9900 --- [HikariPool-8 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=6m45s187ms587µs100ns).
+2025-02-11 19:12:32.593  WARN 9900 --- [HikariPool-8 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=18m3s782ms51µs300ns).
