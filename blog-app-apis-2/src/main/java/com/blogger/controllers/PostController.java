@@ -71,7 +71,7 @@ public class PostController {
 	//get all post
 	@GetMapping("/posts")
 	public ResponseEntity<PostResponse> getAllPost(
-			@RequestParam(value= "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required=false)Integer pageNumber ,
+			@RequestParam(value= "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required=false)Integer pageNumber ,//all value replace by constance
 			@RequestParam(value= "pageSize",defaultValue = AppConstants.PAGE_SIZE,required=false) Integer pageSize ,
 			@RequestParam(value= "sortBy",defaultValue = AppConstants.SORT_BY,required=false) String sortBy,
 			@RequestParam(value= "sortDir",defaultValue = AppConstants.SORT_DIR,required=false) String sortDir
